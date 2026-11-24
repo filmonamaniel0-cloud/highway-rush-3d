@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highway Rush 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container"></div>
+
+    <header class="hud">
+        <div class="brand">HIGHWAY <span>RUSH 3D</span></div>
+
+        <div class="stats">
+            <div class="stat">
+                <small>SCORE</small>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat">
+                <small>COINS</small>
+                <strong id="coins">0</strong>
+            </div>
+
+            <div class="stat">
+                <small>LEVEL</small>
+                <strong id="level">1</strong>
+            </div>
+        </div>
+    </header>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="menu" class="overlay">
+        <div class="panel">
+            <h1>HIGHWAY <span>RUSH</span></h1>
+            <p>Drive fast. Avoid traffic. Collect coins.</p>
+
+            <div class="menu-info">
+                <div>🏆 <span id="best-score">0</span> Best Score</div>
+                <div>🪙 <span id="total-coins">0</span> Total Coins</div>
+            </div>
+
+            <button id="start-btn">START GAME</button>
+            <button id="leaderboard-btn" class="secondary">
+                LEADERBOARD
+            </button>
+            <p class="instructions">
+                Use ← → or A / D to change lanes
+            </p>
+        </div>
+    </div>
+
+    <div id="game-over" class="overlay hidden">
+        <div class="panel">
+            <h1>GAME OVER</h1>
+            <p>Your car crashed!</p>
+
+            <h2>Score: <span id="final-score">0</span></h2>
+            <h3>Coins collected: <span id="final-coins">0</span></h3>
+
+            <button id="restart-btn">PLAY AGAIN</button>
+            <button id="home-btn" class="secondary">MAIN MENU</button>
+        </div>
+    </div>
+
+    <div id="leaderboard" class="overlay hidden">
+        <div class="panel">
+            <h1>🏆 LEADERBOARD</h1>
+            <ol id="leaderboard-list"></ol>
+            <button id="close-leaderboard" class="secondary">
+                BACK
+            </button>
+        </div>
+    </div>
+
+    <div id="level-message" class="level-message hidden">
+        LEVEL COMPLETED!
+    </div>
+
+    <div class="mobile-controls">
+        <button id="left-btn">◀</button>
+        <button id="right-btn">▶</button>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
